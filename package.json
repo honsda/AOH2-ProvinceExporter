@@ -1,0 +1,15 @@
+{
+  "name": "province-updater",
+  "version": "1.0.0",
+  "description": "An updater for the AOH2 Map Editor.",
+  "main": "update.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hons",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "express": "^4.17.1"
+  }
+}
