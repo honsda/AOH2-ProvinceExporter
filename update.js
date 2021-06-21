@@ -120,7 +120,7 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.0
                 });
                 else plog('Process Failed - Please retry the program.')
                 if (fs.existsSync(`./updatedProv/${(linec(provdata) / 2) + 1}`)) fs.unlinkSync(`./updatedProv/${(linec(provdata) / 2) + 1}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2) + 1}'.`));
-                plog(chalk.greenBright.bold('Program done.'));     
+                plog(chalk.greenBright.bold('Program done, you now can close the window.'));     
             }, 1000);
         }
         else {
