@@ -1,6 +1,5 @@
 package-lock.json
 node_modules
-AOH2ProvinceUpdater.exe
 update-macos
 update-linux
 update-win.exe
