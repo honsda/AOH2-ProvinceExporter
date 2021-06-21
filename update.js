@@ -40,16 +40,16 @@ function plog(string) {
 app.listen(1945, () => {
     plog('Turning on... \n\n')
     console.log(chalk.blueBright(`
-///////////////////////  
-╔╗─╔╗──────────╔╗
-║║─║║──────────║║
-║╚═╝╠══╦═╗╔══╦═╝╠══╗
-║╔═╗║╔╗║╔╗╣══╣╔╗║╔╗║
-║║─║║╚╝║║║╠══║╚╝║╔╗║
-╚╝─╚╩══╩╝╚╩══╩══╩╝╚╝
-///////////////////////
+/////////////////////////////////////////////
+─────────────╔╗─╔╗──────────╔╗───────────────
+─────────────║║─║║──────────║║───────────────
+─────────────║╚═╝╠══╦═╗╔══╦═╝╠══╗────────────
+─────────────║╔═╗║╔╗║╔╗╣══╣╔╗║╔╗║────────────
+─────────────║║─║║╚╝║║║╠══║╚╝║╔╗║────────────
+─────────────╚╝─╚╩══╩╝╚╩══╩══╩╝╚╝────────────
+/////////////////////////////////////////////
 
-AOH2 MAP EDITOR PROVINCE UPDATER v1.0.0
+AOH2 MAP EDITOR PROVINCE UPDATER v1.0.2
     `))
 
     console.log(chalk.magentaBright(`
@@ -120,7 +120,10 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.0
                 });
                 else plog('Process Failed - Please retry the program.')
                 if (fs.existsSync(`./updatedProv/${(linec(provdata) / 2) + 1}`)) fs.unlinkSync(`./updatedProv/${(linec(provdata) / 2) + 1}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2) + 1}'.`));
-                plog(chalk.greenBright.bold('Program done, you now can close the window.'));     
+                plog(chalk.greenBright.bold('Program done, exiting automatically in 10 seconds.'));    
+                setTimeout(() => {
+                    process.exit()
+                }, 10000); 
             }, 1000);
         }
         else {
@@ -128,11 +131,11 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.0
                 if (err) {
                   return;
                 } else {
-                  plog("Creating 'editor_data' folder...");
+                  plog("Created 'editor_data' folder. Please retry the program.");
                 }
               })
     
-            plog(chalk.redBright("Map Editor Province data can't be found."));
+            plog(chalk.redBright("[ERROR] Map Editor Province data can't be found."));
             plog(chalk.green.bold("Copy a text file named 'mapAoC2_v2.txt' from your map editor folder, and paste it inside 'editor_data' folder"));
         }
     });
