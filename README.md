@@ -7,7 +7,8 @@ Also i only made an executable version of the program for Windows, you'll have t
 
 ## Running the program
 1. [Download NodeJS](https://nodejs.org/en/download/) for your OS.
-2. Download the repository (Press "Code" and click "Download ZIP")
-3. Extract the Zip file
+2. Download the repository. (Press "Code" and click "Download ZIP")
+3. Extract the Zip file.
 4. Open cmd prompt and redirect to the extracted folder using `cd <your-path-here>`.
-5. Run the program by typing `node update.js` on the cmd prompt
+5. Type `npm install` and wait for it to finish.
+6. Run the program by typing `node update.js` on the cmd prompt.
