@@ -40,16 +40,16 @@ function plog(string) {
 app.listen(1945, () => {
     plog('Turning on... \n\n')
     console.log(chalk.blueBright(`
-/////////////////////////////////////////////
-─────────────╔╗─╔╗──────────╔╗───────────────
-─────────────║║─║║──────────║║───────────────
-─────────────║╚═╝╠══╦═╗╔══╦═╝╠══╗────────────
-─────────────║╔═╗║╔╗║╔╗╣══╣╔╗║╔╗║────────────
-─────────────║║─║║╚╝║║║╠══║╚╝║╔╗║────────────
-─────────────╚╝─╚╩══╩╝╚╩══╩══╩╝╚╝────────────
-/////////////////////////////////////////////
+//////////////////////////////////////////////
+─────────────╔╗─╔╗──────────╔╗────────────────
+─────────────║║─║║──────────║║────────────────
+─────────────║╚═╝╠══╦═╗╔══╦═╝╠══╗─────────────
+─────────────║╔═╗║╔╗║╔╗╣══╣╔╗║╔╗║─────────────
+─────────────║║─║║╚╝║║║╠══║╚╝║╔╗║─────────────
+─────────────╚╝─╚╩══╩╝╚╩══╩══╩╝╚╝─────────────
+//////////////////////////////////////////////
 
-AOH2 MAP EDITOR PROVINCE UPDATER v1.0.2
+AOH2 MAP EDITOR PROVINCE UPDATER v1.0.3
     `))
 
     console.log(chalk.magentaBright(`
@@ -107,7 +107,7 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.2
             setTimeout(() => {
                 if(temp.length = linec(provdata)) temp.forEach((data, i) => { 
                     if (isOdd(i)) {
-                        plog(`Getting province number ${chalk.yellow((i + 1) / 2)}...`)
+                        plog(`Getting province number ${chalk.yellow((i + 1) / 2)}, Created Province File '${((i + 1) / 2) - 1}'...`)
                         //
                         anum++;
                         //if done
@@ -115,11 +115,11 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.2
                             plog(`Finished, ${anum} provinces made.`)
                         }
                     }
-                    fs.writeFileSync(`./updatedProv/${anum + 1}`, `${temp[bnum]};${temp[bnum+1]}`)
+                    fs.writeFileSync(`./updatedProv/${anum}`, `${temp[bnum]};${temp[bnum+1]}`)
                     bnum++;
                 });
                 else plog('Process Failed - Please retry the program.')
-                if (fs.existsSync(`./updatedProv/${(linec(provdata) / 2) + 1}`)) fs.unlinkSync(`./updatedProv/${(linec(provdata) / 2) + 1}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2) + 1}'.`));
+                if (fs.existsSync(`./updatedProv/${(linec(provdata) / 2)}`)) fs.unlinkSync(`./updatedProv/${(linec(provdata) / 2)}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2)}'.`));
                 plog(chalk.greenBright.bold('Program done, exiting automatically in 10 seconds.'));    
                 setTimeout(() => {
                     process.exit()
