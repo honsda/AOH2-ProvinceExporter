@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>honsda.github.io</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/749976047298281602/830259403507892284/homseHome.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="nav-fnd">
+    <div class="nav-bar">
+        <ul class="nav-list">
+            <li><a href="./index.html"><span style="margin-left: 0.5em;display: block;"><img src="./files/images/homseHome.png" width="45px"></span></a></li>
+            <li><a style="margin-left: 10px;" class="nav-elm" href="https://www.youtube.com/channel/UCOI_4nHffq2pL0HM6N4Qbzg">YouTube</a></li>
+            <li><a class="nav-elm" href="https://www.github.com/honsda">GitHub</a></li>
+            <li><a class="nav-elm" onclick="document.getElementById('discord').scrollIntoView({ behavior: 'smooth', block: 'center' });">Discord</a></li>
+        </ul>
+    </div>
+</nav>
+<section>
+    <div class="hg-div-grid" id="prl">
+        <div class="title">
+            <p style="font-family: nunitodic;">AOH2 Province Exporter</p> 
+        </div>
+    </div>
+</section>
+<section>
+    <div style="text-align: center;"><p id="audplaying" class="audmin hg-maintitle">Playing Sweden - C418</p><p class="audmin hg-maintitle">  <button class="swed" type="button" onclick="aud_play_pause()"><i id="audbut" class="fa fa-play"></i></button></p></div>
+    <audio id="joeaud">
+        <source id="srcaudmp4" src="./files/sounds/sweden.mp4" type='audio/mp4'>
+        <source id="srcaudogg" src="./files/sounds/sweden.oga" type='audio/ogg; codecs=vorbis'>
+    </audio>
+</section>
+<!-- badly made -->
+<footer>
+    <section class="font-p" id="discord" style="text-align: left;font-size:1.2em;padding: 2em 0 0.5em 0.5em;text-shadow: 0px 0px 6px #ffffff;color: white;cursor: default;">
+        <a id="refhonsda" style="margin-left: 5px;" href="https://www.github.com/honsda">github.com/honsda</a> - tudou love 2021 fard.inc © <span style="float: right; margin-right: 20px;"><i class="fa fa-discord" aria-hidden="true"></i> hons#5041</span>
+    </section>
+</footer>
+</body>
+<script src="./audbut.js" ></script>
+<script src="./script.js" ></script>
+</html>

@@ -1,0 +1,313 @@
+@font-face {
+    font-family: funnyFont;
+    src: url(files/fonts/Mojang-Regular.ttf);
+ }
+ @font-face {
+    font-family: profFont;
+    src: url(files/fonts/Nunito-Regular.ttf);
+ }
+ @font-face {
+    font-family: nunitodic;
+    src: url(files/fonts/Nunito-SemiBold.ttf);
+ }
+
+
+
+ body {
+     margin: 0px;
+     padding: 0px;
+     background: linear-gradient(249deg, #2a202e, #0c232e, #101216, #13233b);
+     background-size: 800% 800%;
+ 
+     animation: fart 30s ease infinite;
+ }
+ 
+ @keyframes fart {
+     0%{background-position:0% 51%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 51%}
+ }
+
+.hg-maintitle {
+    font-family: nunitodic;
+    font-size: 26px;
+    text-align: center;
+    text-shadow: 0px 0px 18px #ffffff;
+}
+
+.font-d {
+    font-family: profFont;
+    font-size: 26px;
+    text-align: center;
+}
+
+.font-p {
+    font-family: profFont;
+    font-size: 26px;
+    text-align: center;
+}
+
+#prl {
+    background-image: url(files/images/hgdiv-bg.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    border-style: solid;
+    border-color: #101216;
+    border-width: 10px 0px 10px 0px;
+}
+
+.hg-sect-d {
+    background: rgba(20, 20, 31, 0.65);
+    min-height: 100px;
+    border-style: solid;
+    border-color: #101216;
+    border-width: 10px 0px 10px 0px;
+    box-shadow: 0px 0px 18px #101216;
+    padding: 50px;
+}
+
+.hg-sect-1 {
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hg-div-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.6fr 0.8fr 0.4fr;
+    gap: 0px 40px;
+    grid-template-areas:
+      "title title title title title"
+      ". fart main-fart fart2 ."
+      ". fart main-fart fart2 ."
+      ". . . . .";
+    box-shadow: 0px 0px 18px #101216;
+}
+
+.hg-div-grid .title {
+    grid-area: title; 
+}
+
+.hg-div-grid .title p {
+    padding: 10px;
+    text-align:center;
+    border-radius: 5px;
+    font-family: nunitodic;
+    font-size: 60px;
+    color: white;
+    text-shadow: 0px 0px 18px #ffffff;
+}
+.hg-div-grid .fart {
+    grid-area: fart; 
+     background: white;
+    border-radius: 5px;
+    padding:5px;
+    background-image: url(./files/images/honsbot.png);
+    background-size: 55%;
+    background-position: 50% 85%;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.5s;
+}
+.hg-div-grid .fart2 {
+    grid-area: fart2; 
+    background: white;
+    border-radius: 5px;
+    padding:5px;
+    background-image: url(./files/images/oawikibot.png);
+    background-size: 55%;
+    background-position: 50% 85%;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.5s;
+}
+
+.hg-div-grid .main-fart {
+    grid-area: main-fart; 
+    background: white;
+    border-radius: 5px;
+    padding:5px;
+    background-image: url(./files/images/homseHome.png);
+    background-size: 55%;
+    background-position: 50% 85%;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.5s;
+}
+
+.hg-div-grid .main-fart:hover {
+    box-shadow: 0px 0px 18px #ffffff;
+}
+.hg-div-grid .fart2:hover {
+    box-shadow: 0px 0px 18px #ffffff;
+}
+.hg-div-grid .fart:hover {
+    box-shadow: 0px 0px 18px #ffffff;
+}
+.hg-div-grid .hg-p1 #fart {
+    text-align:center;
+    font-family: profFont;
+    font-size: 20px
+}
+.hg-div-grid .hg-mp1 {
+    text-align:center;
+    font-family: nunitodic;
+    font-size: 12px
+}
+
+.audmin {
+    text-shadow: 0px 0px 18px #ffffff; 
+    color: white;
+    display: inline-block;
+}
+
+.swed {     
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;    
+    border: none;
+    font-size: 28px;    
+    color: white;
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
+tr#joetab>td {
+    padding: 1em;
+}
+
+tr#joetab>td>img {
+    border-radius: 20%;
+}
+
+#refhonsda {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+#refhonsda:hover {
+    color:rgb(117, 117, 145);
+    text-shadow: 0px 0px 6px rgb(117, 117, 145);
+}
+
+.f-everything {
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    text-align: center;
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradshin 10s ease infinite;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.shinyes {
+    background-image: repeating-linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(182, 182, 182), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+    text-align: center;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradshin 8s ease infinite;
+}
+
+@keyframes gradshin { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#insanej {
+    width: 50%;
+}
+
+.div-d {
+    display: inline-block;
+    border: 6px solid rgba(17, 17, 32, 0.6);
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px rgba(17, 17, 32, 0.6);
+    background-color: rgba(17, 17, 32, 0.5);
+}
+
+ /* im so lazy at doing responsive stuff */
+ @media only screen and (max-width: 620px) {
+    .hg-div-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.8fr 0.4fr 2fr 0.4fr 2fr 0.4fr 2fr 0.8fr;
+        gap: 0px 40px;
+        grid-template-areas:
+          ". title ."
+          ". . ."
+          ". fart ."
+          ". . ."
+          ". main-fart ."
+          ". . ."
+          ". fart2 ."
+          ". . .";
+        box-shadow: 0px 0px 18px #ffffff;
+    }
+    #insanej {
+        width: 100%;
+    }
+    .div-d {
+        overflow-x: auto;
+    }
+}
+
+.albinomoment {
+    color: white;
+}
+/* i should start organizing a little bit */
+/* NAVBAR */
+.nav-fnd {
+    padding: 1em 1em 0.75em 1em;
+    background-color: #1b1b31;
+    border-bottom: solid 8px #222241;
+    box-shadow: 0px 0px 5px #222241;
+    top: 0;
+}
+.nav-bar {
+    display: inline-block;
+}
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-content: center;
+}
+.nav-list>li {
+    float: left;
+    cursor: pointer;
+}
+.nav-elm {
+    font-family: nunitodic;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 1s;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.nav-elm:hover {
+    background-color: #22223d;
+    color: white;
+}
+
+/*SCROLL*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #10101a; 
+}
+::-webkit-scrollbar-thumb {
+    background: #24243d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2c2c4d; 
+}
