@@ -1,6 +1,6 @@
 {
-  "name": "province-updater",
-  "version": "1.0.0",
+  "name": "province-exporter",
+  "version": "1.0.4",
   "description": "An updater for the AOH2 Map Editor.",
   "main": "update.js",
   "scripts": {
@@ -11,5 +11,16 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "express": "^4.17.1"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honsda/AOH2-ProvinceExporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/honsda/AOH2-ProvinceExporter/issues"
+  },
+  "homepage": "https://github.com/honsda/AOH2-ProvinceExporter#readme"
 }
