@@ -1,5 +1,8 @@
-# AOH2-ProvinceUpdater
-This program updates provinces you have made with the Map Editor data, why should you/when to use this program? This program is used when you accidentally made a mistake while making your map and then not being able to overwrite or update the exported provinces with the Map Editor.
+# AOH2 Province Exporter
+
+I made this program because i had to make it lol and i made it in JavaScript.
+
+This program exports provinces you have made with the Map Editor, so instead of using the Map Editor to export provinces and having to rename the provinces (which isn't the case for Map Editor 2.0) or deleting and remaking the province files with the Map Editor, which is very time consuming. You could use this to export the provinces that are displayed in the Map Editor.
 
 The Instructions of how to use it is in the program.
 ## Running the program in Windows
