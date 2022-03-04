@@ -76,24 +76,11 @@
     background-size: cover;
 }
 
-.hg-div-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.6fr 0.8fr 0.4fr;
-    gap: 0px 40px;
-    grid-template-areas:
-      "title title title title title"
-      ". fart main-fart fart2 ."
-      ". fart main-fart fart2 ."
-      ". . . . .";
-    box-shadow: 0px 0px 18px #101216;
-}
-
-.hg-div-grid .title {
+.title {
     grid-area: title; 
 }
 
-.hg-div-grid .title p {
+.title p {
     padding: 10px;
     text-align:center;
     border-radius: 5px;
@@ -102,56 +89,27 @@
     color: white;
     text-shadow: 0px 0px 18px #ffffff;
 }
-.hg-div-grid .fart {
-    grid-area: fart; 
-     background: white;
+
+.main-fart {
+    margin: auto;
+    margin-bottom: 120px;
+    width: 60%;
+    background-color: rgba(20, 20, 31, 0.85);
+    border-bottom: solid 8px #101216;
     border-radius: 5px;
     padding:5px;
-    background-image: url(./files/images/honsbot.png);
-    background-size: 55%;
-    background-position: 50% 85%;
-    background-repeat: no-repeat;
-    transition: box-shadow 0.5s;
-}
-.hg-div-grid .fart2 {
-    grid-area: fart2; 
-    background: white;
-    border-radius: 5px;
-    padding:5px;
-    background-image: url(./files/images/oawikibot.png);
     background-size: 55%;
     background-position: 50% 85%;
     background-repeat: no-repeat;
     transition: box-shadow 0.5s;
 }
 
-.hg-div-grid .main-fart {
-    grid-area: main-fart; 
-    background: white;
-    border-radius: 5px;
-    padding:5px;
-    background-image: url(./files/images/homseHome.png);
-    background-size: 55%;
-    background-position: 50% 85%;
-    background-repeat: no-repeat;
-    transition: box-shadow 0.5s;
-}
-
-.hg-div-grid .main-fart:hover {
-    box-shadow: 0px 0px 18px #ffffff;
-}
-.hg-div-grid .fart2:hover {
-    box-shadow: 0px 0px 18px #ffffff;
-}
-.hg-div-grid .fart:hover {
-    box-shadow: 0px 0px 18px #ffffff;
-}
-.hg-div-grid .hg-p1 #fart {
+.hg-p1 #fart {
     text-align:center;
     font-family: profFont;
     font-size: 20px
 }
-.hg-div-grid .hg-mp1 {
+.hg-mp1 {
     text-align:center;
     font-family: nunitodic;
     font-size: 12px
@@ -232,22 +190,6 @@ tr#joetab>td>img {
 
  /* im so lazy at doing responsive stuff */
  @media only screen and (max-width: 620px) {
-    .hg-div-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.8fr 0.4fr 2fr 0.4fr 2fr 0.4fr 2fr 0.8fr;
-        gap: 0px 40px;
-        grid-template-areas:
-          ". title ."
-          ". . ."
-          ". fart ."
-          ". . ."
-          ". main-fart ."
-          ". . ."
-          ". fart2 ."
-          ". . .";
-        box-shadow: 0px 0px 18px #ffffff;
-    }
     #insanej {
         width: 100%;
     }
@@ -310,4 +252,57 @@ tr#joetab>td>img {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #2c2c4d; 
+}
+
+/*BUTTON*/
+.trtb {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 5px 0px;
+    grid-template-areas:
+      "btnf"
+      "shfl"
+      "btnd";
+    align-items:flex-start;
+}
+.btnh {
+    font-family: nunitodic;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#filebtn {
+    background-color: #24243a;
+    border: 6px solid rgba(30, 30, 56, 0.5);
+    grid-area: btnf;
+}
+#filebtn:hover {
+    background-color: #343450;
+}
+#downloadzip {
+    background-color: #1b6934;
+    border: solid 6px rgba(17, 75, 51, 0.5);
+    grid-area: btnd;
+}
+#downloadzip:hover {
+    background-color: #197e48;
+}
+#showfile {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    color: white;
+    background-color: #252529;
+    border: 4px solid rgba(49, 49, 53, 0.5);
+    grid-area: shfl;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow-y: scroll;
+    height: 200px;
 }

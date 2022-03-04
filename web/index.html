@@ -23,9 +23,17 @@
     </div>
 </nav>
 <section>
-    <div class="hg-div-grid" id="prl">
+    <div id="prl">
         <div class="title">
             <p style="font-family: nunitodic;">AOH2 Province Exporter</p> 
+        </div>
+        <div class="main-fart">
+            <div class="trtb">
+                <div class="btnh" id="filebtn" onclick="getFile()">Upload mapAoC2_v2.txt file</div>
+                <div id="showfile"></div>
+                <div class="btnh" id="downloadzip">Export Provinces</div>
+                <div style='height: 0px;width: 0px; overflow:hidden;'><input id="mapeditorfile" type="file" value="upload" onchange="sub(this)"/></div>
+            </div>
         </div>
     </div>
 </section>
