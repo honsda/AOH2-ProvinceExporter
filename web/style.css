@@ -273,7 +273,7 @@ tr#joetab>td>img {
     text-align: center;
     color: white;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: 0.2s;
 }
 #filebtn {
     background-color: #24243a;
@@ -290,6 +290,7 @@ tr#joetab>td>img {
 }
 #downloadzip:hover {
     background-color: #197e48;
+    transition: 0.2s;
 }
 #showfile {
     font-family: 'Courier New', Courier, monospace;
