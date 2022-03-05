@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 const pathprov = './editor_data/mapAoC2_v2.txt'
-const prefix = chalk.yellow.bold("[ProvinceUpdater]");
+const prefix = chalk.yellow.bold("[ProvinceExporter]");
 var provdata;
 var temp = [];
 
@@ -49,7 +49,7 @@ app.listen(1945, () => {
 ─────────────╚╝─╚╩══╩╝╚╩══╩══╩╝╚╝─────────────
 //////////////////////////////////////////////
 
-AOH2 MAP EDITOR PROVINCE UPDATER v1.0.3
+AOH2 MAP EDITOR PROVINCE EXPORTER v1.0.4
     `))
 
     console.log(chalk.magentaBright(`
@@ -59,9 +59,9 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.3
 
     1. Make a backup folder of your map editor folder.
 
-    2. Copy the ${chalk.yellow("'mapAoC2_v2.txt'")} file located at ${chalk.yellow("'<your-map-editor>/editor_data/Provinces'")}
-    and paste it inside the ${chalk.yellow("'editor_data'")} folder.
-    If there's no folder named ${chalk.yellow("'editor_data'")}, make one and name it ${chalk.yellow("'editor_data'")} and then paste the file in it.
+    2. Copy the ${chalk.yellow("'mapAoC2_v2.txt'")} file located at ${chalk.yellow("'<your-map-editor-folder>/editor_data/Provinces'")}
+    and paste it inside the ${chalk.yellow("'editor_data'")} folder in the Province Exporter folder.
+    If there's no folder named ${chalk.yellow("'editor_data'")} in the Province Exporter, make one and name it ${chalk.yellow("'editor_data'")} and then paste the file in it.
 
     3. Simply press ${chalk.yellowBright.bold('ENTER')} to start the tool.
     `))
@@ -83,17 +83,17 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.3
             //-
 
             provdata = fs.readFileSync(pathprov, {encoding:'utf8', flag:'r'});
-            plog("Checking if the 'updatedProv' folder exist...");
-            if (!fs.existsSync('./updatedProv')) {
-                fs.mkdir("./updatedProv", function(err) {
+            plog("Checking if the 'exportedProv' folder exist...");
+            if (!fs.existsSync('./exportedProv')) {
+                fs.mkdir("./exportedProv", function(err) {
                     if (err) {
                       plog(err);
                     } else {
-                      plog('Creating updated provinces folder...');
+                      plog('Creating the folder for the exported provinces...');
                     }
                   })
             }
-            // debug fs.writeFileSync('./updatedProv/test', 'test success');
+            // debug fs.writeFileSync('./exportedProv/test', 'test success');
             plog(`${chalk.green.bold(linec(provdata))} Lines detected from data.`);
 
             function isOdd(n) {
@@ -115,11 +115,11 @@ AOH2 MAP EDITOR PROVINCE UPDATER v1.0.3
                             plog(`Finished, ${anum} provinces made.`)
                         }
                     }
-                    fs.writeFileSync(`./updatedProv/${anum}`, `${temp[bnum]};${temp[bnum+1]}`)
+                    fs.writeFileSync(`./exportedProv/${anum}`, `${temp[bnum]};${temp[bnum+1]}`)
                     bnum++;
                 });
                 else plog('Process Failed - Please retry the program.')
-                if (fs.existsSync(`./updatedProv/${(linec(provdata) / 2)}`)) fs.unlinkSync(`./updatedProv/${(linec(provdata) / 2)}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2)}'.`));
+                if (fs.existsSync(`./exportedProv/${(linec(provdata) / 2)}`)) fs.unlinkSync(`./exportedProv/${(linec(provdata) / 2)}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2)}'.`));
                 plog(chalk.greenBright.bold('Program done, exiting automatically in 10 seconds.'));    
                 setTimeout(() => {
                     process.exit()
