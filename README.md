@@ -5,6 +5,11 @@ I made this program because i had to make it lol and i made it in JavaScript.
 This program exports provinces you have made with the Map Editor, so instead of using the Map Editor to export provinces and having to rename the provinces (which isn't the case for Map Editor 2.0) or deleting and remaking the province files with the Map Editor, which is very time consuming. You could use this to export the provinces that are displayed in the Map Editor.
 
 The Instructions of how to use it is in the program.
+
+## Exporting with the website version
+You can go to the website version [here](https://honsda.github.io/AOH2-ProvinceExporter/web). (https://honsda.github.io/AOH2-ProvinceExporter/web)
+
+
 ## Running the program in Windows
 1. Download the Zip file from releases.
 2. Extract the Zip file.
