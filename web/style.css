@@ -307,3 +307,17 @@ tr#joetab>td>img {
     overflow-y: scroll;
     height: 200px;
 }
+
+/*NOTIF*/
+#notif {
+    opacity: 0;
+    margin: auto;
+    width: 58%;
+    margin-bottom: 20px;
+    font-family: nunitodic;
+    border-radius: 5px;
+    text-align: left;
+    color: white;
+    background-color: #d44545;
+    border: 4px solid rgba(255, 94, 94, 0.5);
+}

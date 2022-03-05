@@ -27,11 +27,12 @@
         <div class="title">
             <p style="font-family: nunitodic;">AOH2 Province Exporter</p> 
         </div>
+        <div id="notif"><p style="margin-left: 10px;"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span id="warnmsg">Incorrect file format! please put the correct one.</span></p></div>
         <div class="main-fart">
             <div class="trtb">
                 <div class="btnh" id="filebtn" onclick="getFile()">Upload mapAoC2_v2.txt file</div>
                 <div id="showfile"></div>
-                <div class="btnh" id="downloadzip">Export Provinces</div>
+                <div class="btnh" id="downloadzip" onclick="exportp()">Export Provinces</div>
                 <div style='height: 0px;width: 0px; overflow:hidden;'><input id="mapeditorfile" type="file" value="upload" onchange="sub(this)"/></div>
             </div>
         </div>
@@ -51,6 +52,8 @@
     </section>
 </footer>
 </body>
-<script src="./audbut.js" ></script>
-<script src="./script.js" ></script>
+<script src="./js/audbut.js" ></script>
+<script src="./js/script.js" ></script>
+<script src="./js/jquery-3.6.0.min.js" ></script>
+<script src="./js/zip.min.js" ></script>
 </html>

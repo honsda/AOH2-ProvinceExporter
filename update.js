@@ -101,11 +101,11 @@ AOH2 MAP EDITOR PROVINCE EXPORTER v1.0.4
             }
 
             //Temp
-            var anum = 0;
-            var bnum = 0;
+            var anum = 0; // To count the amount of provinces
+            var bnum = 0; // To format the province file
 
             setTimeout(() => {
-                if(temp.length = linec(provdata)) temp.forEach((data, i) => { 
+                if(temp.length == linec(provdata)) temp.forEach((data, i) => {
                     if (isOdd(i)) {
                         plog(`Getting province number ${chalk.yellow((i + 1) / 2)}, Created Province File '${((i + 1) / 2) - 1}'...`)
                         //
