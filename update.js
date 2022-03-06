@@ -115,11 +115,11 @@ AOH2 MAP EDITOR PROVINCE EXPORTER v1.0.4
                             plog(`Finished, ${anum} provinces made.`)
                         }
                     }
-                    fs.writeFileSync(`./exportedProv/${anum}`, `${temp[bnum]};${temp[bnum+1]}`)
-                    bnum++;
+                    if(i!=linec(provdata)-1)fs.writeFileSync(`./exportedProv/${anum}`, `${temp[bnum]};${temp[bnum+1]}`);bnum++;
                 });
                 else plog('Process Failed - Please retry the program.')
-                if (fs.existsSync(`./exportedProv/${(linec(provdata) / 2)}`)) fs.unlinkSync(`./exportedProv/${(linec(provdata) / 2)}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2)}'.`));
+                //probably broken idk
+                //if (fs.existsSync(`./exportedProv/${(linec(provdata) / 2)}`)) fs.unlinkSync(`./exportedProv/${(linec(provdata) / 2)}`); plog(chalk.redBright(`Deleted bugged file, '${(linec(provdata) / 2)}'.`));
                 plog(chalk.greenBright.bold('Program done, exiting automatically in 10 seconds.'));    
                 setTimeout(() => {
                     process.exit()
